@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #h{
+            position: absolute;
+            left: 125px;
+            top: 50px;
+            {{!-- display: none; --}}
+        }
+        #num{
+            position: absolute;
+            top: 93px;
+            left: 130px;
+        }
+        #btn{
+            position: absolute;
+            top: 250px;
+        }
+        #bt{
+            position: absolute;
+            left: 370px;
+        }
+        #heading{
+            position: absolute;
+            top: 50px;
+            left: 23px;
+            {{!-- display: none;     --}}
+        }
+        #name{
+            position: absolute;
+            top: 92px;
+            left: 25px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <form action="/fech" method="post">
+        <label for="">Enter name of employee: </label> <input type="text" name="pname" required> 
+        <button type="submit" id="bt">See</button>  
+    </form>
+
+    <h2 id="heading">Name</h2>
+    <h3 id="name">{{nme}}</h3>
+    <h2 id="h" class="heading">Numbers</h2>
+    <div id="num">
+        {{#phn}}
+        <h4>{{phno}}</h4>
+        {{/phn}}
+    </div>
+    <form action="/">
+        <button type="submit" id="btn">Go Back</button>  
+    </form> 
+    {{!-- <script>
+        var x = document.getElementById("h");
+        var y = document.getElementById("heading");
+        document.getElementById("bt").addEventListener("mouseover", ()=>{
+            x.style.display = block;
+            y.style.display = block;
+        });
+    </script> --}}
+</body>
+</html>

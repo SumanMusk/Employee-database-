@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        li{
+            list-style-type: none;
+        }
+        #lv1{
+            position: relative;
+            left: 29px;
+        }
+        #lv2{
+            position: absolute;
+            top: 0px;
+            left: 140px;
+        }
+        #lv3{
+            position: absolute;
+            top: 0px;
+            left: 340px;
+        }
+        #ul1{
+            position: absolute;
+            top: 50px;
+            left: 110px;
+        }
+        #ul2{
+            position: absolute;
+            top: 48px;
+            left: 310px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="lv1">Name</h2>
+    <ul>
+        {{#lst}}
+        <li>{{Name}}</li> <br>
+        {{/lst}}
+    </ul>
+    <h2 id="lv2">Phone-No.</h2>
+    <ul id="ul1">
+        {{#lst}}
+        <li>{{phno}}</li> <br>
+        {{/lst}}
+    </ul>
+    <h2 id="lv3">Alternate-No.</h2>
+    <ul id="ul2">
+        {{#lst}}
+        <li>{{countphn}}</li> <br>
+        {{/lst}}
+    </ul>
+    <form action="/">
+        <button type="submit">Go Back</button>
+    </form>
+</body>
+</html>
+{{!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{lst}}
+</body>
+</html> --}}
